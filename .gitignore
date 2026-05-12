@@ -4,3 +4,6 @@ out/
 *.exe
 *.app
 .metadata/
+results/
+finalprojectp1
+my_queue_example

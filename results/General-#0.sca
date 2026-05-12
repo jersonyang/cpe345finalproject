@@ -1,0 +1,138 @@
+version 3
+run General-0-20260417-00:50:43-1682
+attr configname General
+attr datetime 20260417-00:50:43
+attr datetimef 20260417-005043
+attr experiment General
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsd ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Queueing_network
+attr processid 1682
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+config network Queueing_network
+config **.gen.numJobs 1000000
+config **.fifo.capacity 100
+config **.gen.interArrivalTime exponential(1.2s)
+config **.fifo.serviceTime exponential(1.0s)
+
+par Queueing_network.gen typename "\"org.omnetpp.queueing.Source\""
+par Queueing_network.gen numJobs 1000000
+par Queueing_network.gen interArrivalTime exponential(1.2s)
+attr unit s
+par Queueing_network.gen jobName "\"job\""
+par Queueing_network.gen jobType 0
+par Queueing_network.gen jobPriority 0
+par Queueing_network.gen startTime 0.955049s
+attr unit s
+par Queueing_network.gen stopTime -1s
+attr unit s
+scalar Queueing_network.gen created:last 1000000
+attr interpolationmode none
+attr recordingmode last
+attr title "the number of jobs created, last"
+par Queueing_network.fifo typename "\"org.omnetpp.queueing.Queue\""
+par Queueing_network.fifo capacity 100
+par Queueing_network.fifo fifo true
+par Queueing_network.fifo serviceTime exponential(1s)
+attr unit s
+scalar Queueing_network.fifo busy:timeavg 0.83247719577188
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "server busy state, timeavg"
+scalar Queueing_network.fifo queueingTime:mean 4.9537155987605
+attr interpolationmode none
+attr recordingmode mean
+attr title "queueing time at dequeue, mean"
+attr unit s
+scalar Queueing_network.fifo queueingTime:max 55.978491415967
+attr interpolationmode none
+attr recordingmode max
+attr title "queueing time at dequeue, max"
+attr unit s
+scalar Queueing_network.fifo queueLength:timeavg 4.1209493768331
+attr interpolationmode sample-hold
+attr recordingmode timeavg
+attr title "queue length, timeavg"
+scalar Queueing_network.fifo queueLength:max 51
+attr interpolationmode sample-hold
+attr recordingmode max
+attr title "queue length, max"
+scalar Queueing_network.fifo dropped:count 0
+attr interpolationmode none
+attr recordingmode count
+attr title "drop event, count"
+par Queueing_network.sink typename "\"org.omnetpp.queueing.Sink\""
+par Queueing_network.sink keepJobs false
+scalar Queueing_network.sink generation:mean 0
+attr interpolationmode none
+attr recordingmode mean
+attr title "the generation of the arrived jobs, mean"
+scalar Queueing_network.sink generation:max 0
+attr interpolationmode none
+attr recordingmode max
+attr title "the generation of the arrived jobs, max"
+scalar Queueing_network.sink delaysVisited:mean 0
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total number of delays visited by arrived jobs, mean"
+scalar Queueing_network.sink delaysVisited:max 0
+attr interpolationmode none
+attr recordingmode max
+attr title "the total number of delays visited by arrived jobs, max"
+scalar Queueing_network.sink queuesVisited:mean 0.832474
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total number of queues visited by arrived jobs, mean"
+scalar Queueing_network.sink queuesVisited:max 1
+attr interpolationmode none
+attr recordingmode max
+attr title "the total number of queues visited by arrived jobs, max"
+scalar Queueing_network.sink totalServiceTime:mean 1.0007051514611
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total time spent  by arrived jobs, mean"
+attr unit s
+scalar Queueing_network.sink totalServiceTime:max 15.077387715392
+attr interpolationmode none
+attr recordingmode max
+attr title "the total time spent  by arrived jobs, max"
+attr unit s
+scalar Queueing_network.sink totalDelayTime:mean 0
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total time spent in delay nodes by arrived jobs, mean"
+attr unit s
+scalar Queueing_network.sink totalDelayTime:max 0
+attr interpolationmode none
+attr recordingmode max
+attr title "the total time spent in delay nodes by arrived jobs, max"
+attr unit s
+scalar Queueing_network.sink totalQueueingTime:mean 4.9537155987605
+attr interpolationmode none
+attr recordingmode mean
+attr title "the total time spent in queues by arrived jobs, mean"
+attr unit s
+scalar Queueing_network.sink totalQueueingTime:max 55.978491415967
+attr interpolationmode none
+attr recordingmode max
+attr title "the total time spent in queues by arrived jobs, max"
+attr unit s
+scalar Queueing_network.sink lifeTime:mean 5.9544207502218
+attr interpolationmode none
+attr recordingmode mean
+attr title "lifetime of arrived jobs, mean"
+attr unit s
+scalar Queueing_network.sink lifeTime:max 57.085378311197
+attr interpolationmode none
+attr recordingmode max
+attr title "lifetime of arrived jobs, max"
+attr unit s
+par Queueing_network typename "\"Queueing_network\""
+
